@@ -1,0 +1,51 @@
+respondent_id,age_group,education,vaccination_status,trust_in_vaccines
+R001,46-55,College,Vaccinated,High
+R002,56-65,College,Vaccinated,High
+R003,36-45,College,Partially Vaccinated,Medium
+R004,56-65,High School,Partially Vaccinated,High
+R005,56-65,College,Partially Vaccinated,Low
+R006,26-35,High School,Vaccinated,Low
+R007,36-45,College,Partially Vaccinated,High
+R008,36-45,Graduate,Partially Vaccinated,Low
+R009,36-45,Graduate,Vaccinated,Low
+R010,56-65,High School,Partially Vaccinated,High
+R011,46-55,Graduate,Vaccinated,High
+R012,36-45,Graduate,Unvaccinated,Low
+R013,65+,College,Partially Vaccinated,Low
+R014,56-65,High School,Unvaccinated,Low
+R015,26-35,College,Vaccinated,Medium
+R016,46-55,College,Partially Vaccinated,Medium
+R017,65+,College,Vaccinated,Medium
+R018,65+,College,Unvaccinated,High
+R019,26-35,College,Vaccinated,Medium
+R020,46-55,College,Partially Vaccinated,High
+R021,56-65,College,Partially Vaccinated,High
+R022,18-25,High School,Unvaccinated,Medium
+R023,46-55,Graduate,Vaccinated,Medium
+R024,26-35,College,Partially Vaccinated,Medium
+R025,65+,College,Unvaccinated,Low
+R026,56-65,College,Partially Vaccinated,Medium
+R027,46-55,College,Partially Vaccinated,Low
+R028,18-25,College,Vaccinated,High
+R029,18-25,College,Partially Vaccinated,Low
+R030,36-45,Graduate,Vaccinated,Medium
+R031,36-45,Graduate,Partially Vaccinated,High
+R032,26-35,College,Unvaccinated,High
+R033,46-55,Graduate,Partially Vaccinated,High
+R034,46-55,High School,Vaccinated,Low
+R035,65+,College,Vaccinated,Medium
+R036,65+,High School,Unvaccinated,High
+R037,65+,High School,Partially Vaccinated,High
+R038,36-45,College,Partially Vaccinated,High
+R039,46-55,Graduate,Unvaccinated,Low
+R040,46-55,High School,Partially Vaccinated,Low
+R041,18-25,College,Partially Vaccinated,Medium
+R042,36-45,High School,Vaccinated,Low
+R043,56-65,High School,Partially Vaccinated,High
+R044,36-45,High School,Partially Vaccinated,Medium
+R045,56-65,High School,Unvaccinated,High
+R046,18-25,Graduate,Unvaccinated,High
+R047,26-35,High School,Vaccinated,Low
+R048,46-55,High School,Partially Vaccinated,Medium
+R049,18-25,High School,Partially Vaccinated,Low
+R050,46-55,Graduate,Partially Vaccinated,Low

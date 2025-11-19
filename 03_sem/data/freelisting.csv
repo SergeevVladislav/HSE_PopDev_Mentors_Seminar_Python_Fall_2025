@@ -1,0 +1,51 @@
+respondent_id,item_1,item_2,item_3
+R001,protection from disease,health,immunity
+R002,protection from disease,prevention,safety
+R003,protection from disease,immunity,protection from disease
+R004,health,prevention,safety
+R005,health,safety,prevention
+R006,prevention,immunity,protection from disease
+R007,prevention,safety,health
+R008,immunity,protection from disease,safety
+R009,immunity,prevention,health
+R010,safety,health,immunity
+R011,side effects,side effects,headache
+R012,side effects,headache,fever
+R013,risk,fever,distrust
+R014,risk,allergy,side effects
+R015,headache,distrust,allergy
+R016,fever,danger,danger
+R017,allergy,distrust,state control
+R018,danger,state control,mandate
+R019,danger,mandate,coercion
+R020,distrust,mandate,mandate
+R021,state control,coercion,distrust
+R022,state control,distrust,economic interests
+R023,mandate,danger,state control
+R024,mandate,state control,oppression
+R025,coercion,economic interests,authoritarianism
+R026,trust in doctors,scientific progress,life saving
+R027,trust in doctors,life saving,herd immunity
+R028,scientific progress,herd immunity,protect vulnerable
+R029,scientific progress,protect vulnerable,scientific progress
+R030,life saving,life saving,long-term protection
+R031,life saving,protect vulnerable,community protection
+R032,herd immunity,community protection,solidarity
+R033,herd immunity,herd immunity,responsibility
+R034,protect vulnerable,life saving,public good
+R035,protect vulnerable,long-term protection,ethics
+R036,economic interests,pharma companies,profit
+R037,economic interests,profit,monopoly
+R038,pharma companies,economic interests,financial interests
+R039,pharma companies,monopoly,corruption
+R040,profit,financial interests,lobbying
+R041,natural immunity,past infection,naturalness
+R042,natural immunity,nature,nature
+R043,past infection,naturalness,biology
+R044,nature,natural immunity,past infection
+R045,naturalness,biology,immune system
+R046,long-term effects,unknown,DNA risk
+R047,long-term effects,DNA risk,biotechnology
+R048,unknown,long-term effects,new technology
+R049,DNA risk,biotechnology,genetic engineering
+R050,biotechnology,new technology,unknown risks
