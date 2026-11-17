@@ -1,0 +1,107 @@
+WEEK 1 — LOCAL JUPYTER SETUP
+
+Extract the whole archive. Open the materials folder in Jupyter.
+Run 00_setup_check.ipynb before the four blank student notebooks.
+This text repeats the setup section of README.md; read README.md for the full course guide.
+
+## Setup: what each component does
+
+| Component | Purpose |
+|---|---|
+| Python | Interpreter that executes the code. These materials were checked with Python 3.12. |
+| Virtual environment (`.venv`) | Keeps this project’s installed packages separate from other projects. |
+| `pip` | Installs packages into a Python environment. |
+| Jupyter Notebook / JupyterLab | Browser interface for writing cells, seeing output, and adding explanations. |
+| Kernel | The running Python process behind a notebook. It must use the environment containing your packages. |
+| `import` | Makes an installed library available inside the current Python session. |
+
+Installation needs internet access. After setup, the notebooks use local files and can run offline. You do not need a GPU, a paid service, or a cloud notebook account.
+
+### If Python and Jupyter already work
+
+Keep your existing environment. Open `00_setup_check.ipynb` and run its prepared cells.
+
+If a library is missing, run this **inside a Jupyter Python code cell**:
+
+```python
+%pip install numpy pandas matplotlib seaborn
+```
+
+Restart the kernel, then repeat the check. `%pip` uses the environment of the current IPython kernel. It is a notebook command, not a line to copy into an ordinary `.py` file. See [IPython documentation](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-pip).
+
+### Fresh installation: Windows
+
+1. Install a supported Python 3 from [python.org](https://www.python.org/downloads/), if Python is not installed. If the installer offers **Add Python to PATH**, enable it. Close and reopen your terminal after installation.
+2. Extract the course archive. Open **Command Prompt or PowerShell in the extracted folder**.
+3. Check the Python launcher:
+
+```powershell
+py --version
+```
+
+4. Create a local environment, install the listed packages, and launch Jupyter:
+
+```powershell
+py -m venv .venv
+.venv\Scripts\python.exe -m pip install --upgrade pip
+.venv\Scripts\python.exe -m pip install -r requirements.txt
+.venv\Scripts\python.exe -m notebook
+```
+
+If `py` is unavailable but `python --version` works, use `python -m venv .venv` for the first line. The remaining commands are unchanged. These commands use the environment’s Python directly, so activation and PowerShell activation-policy changes are not needed.
+
+### Fresh installation: macOS
+
+1. Install a supported Python 3 from [python.org](https://www.python.org/downloads/), if needed.
+2. Open Terminal in the extracted materials folder. Check Python, create an environment, install packages, and start Jupyter:
+
+```bash
+python3 --version
+python3 -m venv .venv
+.venv/bin/python -m pip install --upgrade pip
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m notebook
+```
+
+Do not modify the operating system’s Python installation to run this course. Use the project environment.
+
+### Fresh installation: Linux
+
+In a terminal inside the materials folder:
+
+```bash
+python3 --version
+python3 -m venv .venv
+.venv/bin/python -m pip install --upgrade pip
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m notebook
+```
+
+If Python or its `venv` support is missing, install it using your distribution’s normal package manager or ask for setup help. On Debian/Ubuntu the relevant system packages are commonly `python3`, `python3-venv`, and `python3-pip`. Do not use `sudo pip` or disable an externally-managed-environment protection to install course libraries.
+
+Keep the terminal running while Jupyter is open. The notebook interface is displayed in a browser, but the code executes on your own computer. These steps follow the [Python packaging guide](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/) and [Jupyter installation documentation](https://jupyter.org/install).
+
+### Packages and kernels
+
+`requirements.txt` installs Jupyter Notebook, ipykernel, NumPy, pandas, Matplotlib, and seaborn. Seaborn 0.13 or newer supports the plotting syntax used here. Installation selects compatible versions for your Python. Run `00_setup_check.ipynb` to check your environment before class.
+
+If Jupyter opens but uses the wrong Python, inspect the selected interpreter in a code cell:
+
+```python
+import sys
+print(sys.executable)
+```
+
+If necessary, register the environment as a named kernel. Run the appropriate line **in the terminal**, from the materials folder:
+
+```powershell
+# Windows
+.venv\Scripts\python.exe -m ipykernel install --user --name popdev-week1 --display-name "Python (PopDev Week 1)"
+```
+
+```bash
+# macOS / Linux
+.venv/bin/python -m ipykernel install --user --name popdev-week1 --display-name "Python (PopDev Week 1)"
+```
+
+Then select **Python (PopDev Week 1)** in Jupyter’s kernel menu and rerun the imports. This is an optional fix; it is not necessary if your existing kernel already passes the setup check.

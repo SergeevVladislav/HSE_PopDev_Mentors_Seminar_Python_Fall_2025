@@ -1,0 +1,19 @@
+# Only the public student distribution in this directory may be tracked.
+/*
+!/.gitignore
+!/README.md
+!/SETUP_EN.txt
+!/requirements.txt
+!/Intro_Seminar_Week1.pdf
+!/00_setup_check.ipynb
+!/01_python_basics_student.ipynb
+!/02_numpy_student.ipynb
+!/03_pandas_student.ipynb
+!/04_visualization_student.ipynb
+!/student_materials.zip
+!/data/
+/data/*
+!/data/adult.data.csv
+!/data/wdi_population.csv
+!/data/wdi_provenance.json
+!/data/DATA_NOTE_EN.txt

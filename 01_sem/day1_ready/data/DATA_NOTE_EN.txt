@@ -1,0 +1,33 @@
+TEACHING DATA: PROVENANCE AND DEFINITIONS
+
+World Bank extract retrieved (UTC): 2026-11-17T10:25:17+00:00
+CSV SHA256: 200e379946bc2041bf605be8ec4333b13d33f86a2b64fc5f4655f76db33542b1
+The JSON manifest preserves the source URLs and selected original values.
+
+## Data and interpretation
+
+### Main data: World Bank demographic indicators
+
+The supplied `wdi_population.csv` contains **32 rows and 7 columns**: eight countries, each observed in 2010, 2015, 2020, and 2023. Values are taken from World Bank indicator downloads. No missing values were imputed. The extract is kept fixed for class; `wdi_provenance.json` records retrieval details, source URLs, and the selected original values.
+
+| Column | Meaning | Unit / role |
+|---|---|---|
+| `country_code` | Three-letter country identifier | Part of the observation key |
+| `country` | Country name supplied by the source | Label |
+| `year` | Reference year | Part of the observation key |
+| `population` | Total population, `SP.POP.TOTL` | People |
+| `share_65_plus` | Population aged 65+, `SP.POP.65UP.TO.ZS` | Percent of total population |
+| `life_expectancy` | Life expectancy at birth, `SP.DYN.LE00.IN` | Years |
+| `urban_share` | Urban population, `SP.URB.TOTL.IN.ZS` | Percent of total population |
+
+Sources and definitions: [total population](https://data.worldbank.org/indicator/SP.POP.TOTL), [population aged 65+](https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS), [life expectancy](https://data.worldbank.org/indicator/SP.DYN.LE00.IN), [urban population](https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS).
+
+The countries were selected for a manageable teaching example; they are not a random or representative world sample. A country-year is not a person. Summing population across different years does not give a meaningful single-year population total. An unweighted mean of country shares gives every country equal weight; a combined population share requires population weights or appropriate sums of counts. Derived numbers of older people are approximate combinations of published estimates.
+
+Life expectancy at birth is a period life-table measure, not the average age at death in a sample. Urban definitions and country estimates have source-specific limitations. Use the indicator documentation in substantive research. A scatter plot shows a pattern in the selected observations; it does not establish causation.
+
+### Additional data: Adult Income
+
+The existing `adult.data.csv` is retained for after-class exercises. It contains 32,561 historical individual records and 15 original columns. Question marks denote missing categories. The local `salary` field gives an annual income category, not exact earnings. Classroom summaries are unweighted descriptions of this file. [UCI dataset documentation](https://www.archive.ics.uci.edu/dataset/2/adult).
+
+All small town examples in the Python and NumPy notebooks are **fictional**, and their assumed thresholds or growth rates are classroom scenarios, not policy standards or forecasts.
