@@ -5,6 +5,7 @@ Python materials for demographic analysis, public administration, and econometri
 ## Week 1
 
 - [Materials, installation, and datasets](01_sem/README.md)
+- [Final research project requirements](01_sem/day1_ready/FINAL_PROJECT.md)
 - [Introduction](01_sem/day1_ready/Intro_Seminar_Week1.pdf)
 - [Python basics](01_sem/day1_ready/01_python_basics_student.ipynb)
 - [NumPy](01_sem/day1_ready/02_numpy_student.ipynb)

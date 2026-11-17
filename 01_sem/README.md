@@ -6,6 +6,7 @@ Python for demographic analysis, public administration, and the foundations of e
 
 | Material | Contents |
 |---|---|
+| [Final research project](day1_ready/FINAL_PROJECT.md) | Requirements, academic integrity, Python analysis, and public GitHub submission. |
 | [Introduction](day1_ready/Intro_Seminar_Week1.pdf) | Population indicators, policy questions, research design, and reproducible analysis. |
 | [Python](day1_ready/01_python_basics_student.ipynb) | Variables, types, lists, dictionaries, conditions, loops, and functions. |
 | [NumPy](day1_ready/02_numpy_student.ipynb) | Arrays, arithmetic, Boolean masks, and population shares. |
@@ -29,6 +30,7 @@ Keep the notebooks and the `data` folder together. The exercise notebooks contai
 ```text
 popdev_week1/
 ├── README.md
+├── FINAL_PROJECT.md
 ├── SETUP_EN.txt
 ├── requirements.txt
 ├── Intro_Seminar_Week1.pdf
