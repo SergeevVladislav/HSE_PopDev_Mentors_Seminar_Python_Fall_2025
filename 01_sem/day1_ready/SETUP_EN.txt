@@ -1,10 +1,7 @@
-WEEK 1 — LOCAL JUPYTER SETUP
+# Python and Jupyter setup
 
-Extract the whole archive. Open the materials folder in Jupyter.
-Run 00_setup_check.ipynb before the four blank student notebooks.
-This text repeats the setup section of README.md; read README.md for the full course guide.
+Working directory: the extracted popdev_week1 folder, or 01_sem/day1_ready in the repository. It must contain requirements.txt, the notebooks, and data/.
 
-## Setup: what each component does
 
 | Component | Purpose |
 |---|---|
@@ -32,7 +29,7 @@ Restart the kernel, then repeat the check. `%pip` uses the environment of the cu
 ### Fresh installation: Windows
 
 1. Install a supported Python 3 from [python.org](https://www.python.org/downloads/), if Python is not installed. If the installer offers **Add Python to PATH**, enable it. Close and reopen your terminal after installation.
-2. Extract the course archive. Open **Command Prompt or PowerShell in the extracted folder**.
+2. Extract the materials archive. Open **Command Prompt or PowerShell in the extracted folder**.
 3. Check the Python launcher:
 
 ```powershell
@@ -63,7 +60,7 @@ python3 -m venv .venv
 .venv/bin/python -m notebook
 ```
 
-Do not modify the operating system’s Python installation to run this course. Use the project environment.
+Do not modify the operating system’s Python installation to run these notebooks. Use the project environment.
 
 ### Fresh installation: Linux
 
@@ -77,13 +74,13 @@ python3 -m venv .venv
 .venv/bin/python -m notebook
 ```
 
-If Python or its `venv` support is missing, install it using your distribution’s normal package manager or ask for setup help. On Debian/Ubuntu the relevant system packages are commonly `python3`, `python3-venv`, and `python3-pip`. Do not use `sudo pip` or disable an externally-managed-environment protection to install course libraries.
+If Python or its `venv` support is missing, install it using your distribution’s normal package manager or ask for setup help. On Debian/Ubuntu the relevant system packages are commonly `python3`, `python3-venv`, and `python3-pip`. Do not use `sudo pip` or disable an externally-managed-environment protection to install these libraries.
 
 Keep the terminal running while Jupyter is open. The notebook interface is displayed in a browser, but the code executes on your own computer. These steps follow the [Python packaging guide](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/) and [Jupyter installation documentation](https://jupyter.org/install).
 
 ### Packages and kernels
 
-`requirements.txt` installs Jupyter Notebook, ipykernel, NumPy, pandas, Matplotlib, and seaborn. Seaborn 0.13 or newer supports the plotting syntax used here. Installation selects compatible versions for your Python. Run `00_setup_check.ipynb` to check your environment before class.
+`requirements.txt` installs Jupyter Notebook, ipykernel, NumPy, pandas, Matplotlib, and seaborn. Seaborn 0.13 or newer supports the plotting syntax used here. Installation selects compatible versions for your Python. Run `00_setup_check.ipynb` to check the environment.
 
 If Jupyter opens but uses the wrong Python, inspect the selected interpreter in a code cell:
 
@@ -105,3 +102,51 @@ If necessary, register the environment as a named kernel. Run the appropriate li
 ```
 
 Then select **Python (PopDev Week 1)** in Jupyter’s kernel menu and rerun the imports. This is an optional fix; it is not necessary if your existing kernel already passes the setup check.
+
+## Using Jupyter
+
+1. Open an `.ipynb` file through Jupyter's file browser and select a Python kernel.
+2. Write Python in a code cell. Use Markdown cells for explanations.
+3. Press **Shift + Enter** to run a cell and move to the next one; **Ctrl + Enter** runs it without moving.
+4. Save with **Ctrl + S**, or **Cmd + S** on macOS.
+5. After completing the code, restart the kernel and run the notebook from the beginning to check execution order.
+
+Editing a cell does not rerun it. The kernel remembers variables in the order in which cells actually ran.
+Each notebook needs its own imports and definitions. Use straight quotes and a decimal point in Python code.
+
+Terminal commands belong in a terminal. `%pip` is an IPython command that can run inside a notebook.
+Do not paste the `>>>` prompt from documentation into a code cell.
+
+## Setup checks for terminal tools and agents
+
+- **Working directory:** the directory containing `requirements.txt`, the notebooks, and `data/`.
+- **Interpreter:** use the existing working environment, or the `.venv` interpreter created by the commands above.
+- **Dependencies:** install from `requirements.txt` using that interpreter's `-m pip`; do not install into a different Python environment.
+- **Verification:** run `00_setup_check.ipynb` in the same environment. All four library imports must succeed, both data-file checks must be `True`, and the demographic table shape must be `(32, 7)`.
+- **Launch:** run the environment's Python with `-m notebook` from the working directory. Select the matching kernel.
+
+The environment check contains executable diagnostic cells. The exercise notebooks contain blank cells; running them does not verify an analysis.
+
+## Troubleshooting
+
+| Symptom | First thing to check |
+|---|---|
+| `ModuleNotFoundError` | Is the package installed in the kernel’s environment? Use `sys.executable`, then `%pip` if needed. Restart after installation. |
+| `FileNotFoundError` | Was the whole archive extracted? Is `data` beside the notebook? Check the working folder below. |
+| `NameError` | Check spelling and capitalisation. Run the cell defining the name or import first. |
+| `SyntaxError` | Check quotes, brackets, commas, and colons. Terminal commands are not Python syntax. |
+| `IndentationError` | Use consistent four-space indentation after `if`, `else`, `for`, and `def`. |
+| `KeyError` | Use the exact column or dictionary key, including spelling and punctuation. |
+| A cell remains busy | Wait briefly, then interrupt the kernel if necessary. Restart and run earlier cells again. |
+| A plot is blank | Run the data preparation and plotting cell; include `plt.show()`. Check that the filter selected observations. |
+| Results differ after restart | The earlier run depended on execution order or a missing definition. Read the notebook from the top. |
+
+To diagnose a file path, run this in a code cell:
+
+```python
+from pathlib import Path
+print(Path.cwd())
+print(Path("data/wdi_population.csv").exists())
+```
+
+The second result should be `True`. If it is `False`, reopen Jupyter in the materials folder or use the actual full file path. Do not download a different dataset to solve a local path problem.

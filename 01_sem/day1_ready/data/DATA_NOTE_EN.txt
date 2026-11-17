@@ -1,33 +1,56 @@
-TEACHING DATA: PROVENANCE AND DEFINITIONS
+DATA SOURCES AND DEFINITIONS
 
 World Bank extract retrieved (UTC): 2026-11-17T10:25:17+00:00
 CSV SHA256: 200e379946bc2041bf605be8ec4333b13d33f86a2b64fc5f4655f76db33542b1
-The JSON manifest preserves the source URLs and selected original values.
 
-## Data and interpretation
+## Datasets
 
-### Main data: World Bank demographic indicators
+### World Bank demographic indicators
 
-The supplied `wdi_population.csv` contains **32 rows and 7 columns**: eight countries, each observed in 2010, 2015, 2020, and 2023. Values are taken from World Bank indicator downloads. No missing values were imputed. The extract is kept fixed for class; `wdi_provenance.json` records retrieval details, source URLs, and the selected original values.
+[Download the prepared CSV](wdi_population.csv).
+The same file is included in the materials archive at `data/wdi_population.csv`.
 
-| Column | Meaning | Unit / role |
+The file contains **32 rows and 7 columns**: Brazil, China, Germany, India, Japan, Mexico, the Russian Federation, and South Africa, each observed in **2010, 2015, 2020, and 2023**.
+One row is a **country-year**, identified by `country_code` and `year`.
+
+| Column | Meaning | Unit |
 |---|---|---|
-| `country_code` | Three-letter country identifier | Part of the observation key |
-| `country` | Country name supplied by the source | Label |
-| `year` | Reference year | Part of the observation key |
-| `population` | Total population, `SP.POP.TOTL` | People |
-| `share_65_plus` | Population aged 65+, `SP.POP.65UP.TO.ZS` | Percent of total population |
-| `life_expectancy` | Life expectancy at birth, `SP.DYN.LE00.IN` | Years |
-| `urban_share` | Urban population, `SP.URB.TOTL.IN.ZS` | Percent of total population |
+| `country_code` | Three-letter country identifier | Observation key, with `year` |
+| `country` | Country name supplied by the source | Text |
+| `year` | Reference year | Calendar year |
+| `population` | Total population | People |
+| `share_65_plus` | Population aged 65+ | Percent of total population |
+| `life_expectancy` | Life expectancy at birth | Years |
+| `urban_share` | Urban population | Percent of total population |
 
-Sources and definitions: [total population](https://data.worldbank.org/indicator/SP.POP.TOTL), [population aged 65+](https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS), [life expectancy](https://data.worldbank.org/indicator/SP.DYN.LE00.IN), [urban population](https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS).
+Original sources and downloads:
 
-The countries were selected for a manageable teaching example; they are not a random or representative world sample. A country-year is not a person. Summing population across different years does not give a meaningful single-year population total. An unweighted mean of country shares gives every country equal weight; a combined population share requires population weights or appropriate sums of counts. Derived numbers of older people are approximate combinations of published estimates.
+| Indicator | Definition | Full source download |
+|---|---|---|
+| `SP.POP.TOTL` | [Total population](https://data.worldbank.org/indicator/SP.POP.TOTL) | [CSV archive](https://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv) |
+| `SP.POP.65UP.TO.ZS` | [Population aged 65+](https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS) | [CSV archive](https://api.worldbank.org/v2/en/indicator/SP.POP.65UP.TO.ZS?downloadformat=csv) |
+| `SP.DYN.LE00.IN` | [Life expectancy at birth](https://data.worldbank.org/indicator/SP.DYN.LE00.IN) | [CSV archive](https://api.worldbank.org/v2/en/indicator/SP.DYN.LE00.IN?downloadformat=csv) |
+| `SP.URB.TOTL.IN.ZS` | [Urban population](https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS) | [CSV archive](https://api.worldbank.org/v2/en/indicator/SP.URB.TOTL.IN.ZS?downloadformat=csv) |
 
-Life expectancy at birth is a period life-table measure, not the average age at death in a sample. Urban definitions and country estimates have source-specific limitations. Use the indicator documentation in substantive research. A scatter plot shows a pattern in the selected observations; it does not establish causation.
+To reconstruct the extract, download and unpack the four indicator archives. Read each `API_*.csv` file after its metadata preamble; keep country codes `BRA`, `CHN`, `DEU`, `IND`, `JPN`, `MEX`, `RUS`, and `ZAF`, and year columns `2010`, `2015`, `2020`, and `2023`. Reshape years into rows, join the indicators on country code and year, and use the column names above. The original downloads contain more countries and years than the prepared file.
 
-### Additional data: Adult Income
+The saved extract was retrieved on **17 November 2026**. No missing values were imputed.
+[Provenance](wdi_provenance.json) records source URLs, selected original values, and SHA-256 checksums.
+World Bank downloads may be revised; use the included CSV to reproduce this saved extract exactly.
 
-The existing `adult.data.csv` is retained for after-class exercises. It contains 32,561 historical individual records and 15 original columns. Question marks denote missing categories. The local `salary` field gives an annual income category, not exact earnings. Classroom summaries are unweighted descriptions of this file. [UCI dataset documentation](https://www.archive.ics.uci.edu/dataset/2/adult).
+These eight countries are not a random or representative world sample. Summing populations across different years does not give a single-year total. An unweighted mean of country shares gives every country equal weight; a combined population share requires population weights or sums of the corresponding counts.
 
-All small town examples in the Python and NumPy notebooks are **fictional**, and their assumed thresholds or growth rates are classroom scenarios, not policy standards or forecasts.
+Life expectancy at birth is a period life-table measure, not the average age at death in a sample. Derived numbers of older people combine published estimates and are approximate. Country-level associations do not establish causal effects or individual-level relationships. Consult each indicator's documentation for definitions and limitations.
+
+### Adult Income
+
+[Download the prepared CSV](adult.data.csv), also included at `data/adult.data.csv`.
+Original source: [UCI Adult documentation](https://archive.ics.uci.edu/dataset/2/adult) and [dataset ZIP](https://archive.ics.uci.edu/static/public/2/adult.zip).
+
+The prepared file contains **32,561 historical individual records and 15 columns**.
+It corresponds to the original `adult.data` file, with a header row and the income category named `salary`.
+The original UCI file has no header and includes spaces after delimiters; it is not a direct replacement for the prepared CSV.
+Question marks (`?`) denote missing categories. `salary` is an annual income category (`<=50K` or `>50K`), not an exact amount.
+Unweighted summaries describe this file; they are not estimates of the current population.
+
+All town examples in the Python and NumPy notebooks are fictional. Their thresholds and assumed growth rates are exercise assumptions, not policy standards or demographic forecasts.
