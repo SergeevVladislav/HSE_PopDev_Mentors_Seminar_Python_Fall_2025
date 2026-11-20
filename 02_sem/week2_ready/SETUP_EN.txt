@@ -1,0 +1,137 @@
+PYTHON, JUPYTER, AND RLMS-HSE DATA
+
+Use Python 3.12 for a setup close to the verified environment. An existing working
+Week 1 environment can be reused. Keep notebooks and the data folder together.
+
+1. GET THE MATERIALS
+
+Download student_materials.zip from the course GitHub repository and extract it.
+Do not try to run notebooks from inside the ZIP viewer. Open a terminal in the
+extracted popdev_week2 folder. A full repository clone uses 02_sem/week2_ready.
+
+2. CREATE AN ENVIRONMENT IF NEEDED
+
+Windows PowerShell (Python installed from https://www.python.org/downloads/):
+
+  py -3.12 -m venv .venv
+  .\.venv\Scripts\python.exe -m pip install --upgrade pip
+  .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+  .\.venv\Scripts\python.exe -m notebook
+
+Using the executable directly avoids PowerShell activation-policy issues.
+If Python 3.12 is not installed, install it or use a compatible installed Python.
+The commands below use 'python'; substitute your environment's full executable
+path when the environment is not activated.
+
+macOS / Linux:
+
+  python3 -m venv .venv
+  source .venv/bin/activate
+  python -m pip install --upgrade pip
+  python -m pip install -r requirements.txt
+  python -m notebook
+
+On Linux, if venv is unavailable, install the distribution's python3-venv package
+through its package manager, then repeat the environment command.
+Do not use sudo pip or install into a managed system Python.
+
+Already using a Week 1 virtual environment or conda environment:
+
+  Activate that environment first.
+  python -m pip install -r requirements.txt
+  python -m notebook
+
+Keep the terminal running while you use Jupyter. Open 00_setup_check.ipynb in the
+browser and run its cells. Shift+Enter runs a cell; Ctrl+S / Cmd+S saves.
+
+3. MATCH THE KERNEL TO THE ENVIRONMENT
+
+Inside a notebook:
+
+  import sys
+  print(sys.executable)
+
+If you need to register the environment as a kernel, run in its terminal:
+
+  python -m ipykernel install --user --name popdev --display-name "Python (PopDev)"
+
+Then choose Python (PopDev) in Jupyter's kernel menu. If packages were installed
+while a kernel was running, restart it. Notebook installs can use:
+
+  %pip install -r requirements.txt
+
+Avoid !pip: it can point to a different interpreter.
+
+4. PREPARE RLMS BEFORE OPENING THE EARNINGS EXERCISES
+
+Source: https://www.hse.ru/en/rlms/downloads
+Access conditions: https://www.hse.ru/en/rlms/reg
+Codebooks: https://www.hse.ru/en/rlms/code
+
+Follow the provider's registration and data-use instructions. Select English
+longitudinal Individuals / For STATA, with 2024 included. Current release names
+may end in 2025 or a later year; the script still selects 2024.
+
+Run from this folder, replacing the example path:
+
+  python prepare_rlms.py --input "/path/to/RLMS_IND_1994_2025_eng_DTA.7z"
+
+Or give an extracted .dta file:
+
+  python prepare_rlms.py --input "/path/to/RLMS_IND_1994_2024_eng.dta"
+
+Windows direct-executable example:
+
+  .\.venv\Scripts\python.exe prepare_rlms.py --input "C:\Users\YourName\Downloads\RLMS_IND_1994_2025_eng_DTA.7z"
+
+The verified archive expands to about 14.7 GB. Allow roughly 16 GB free temporary
+disk space; updated releases may need more. The script checks space, extracts
+temporarily, reads selected variables, writes a small CSV, and deletes its own
+temporary unpacked data. Your downloaded source is preserved. An existing DTA
+can be read directly without a second expanded copy.
+
+Expected local output: data/rlms_2024_earnings.csv and
+data/rlms_local_provenance.json. Neither belongs in a public repository or ZIP.
+The source identifiers are not included in the teaching CSV. Original numeric
+nonresponse codes remain so they can be examined and cleaned in the notebook.
+
+The script checks source labels and unique person-year records. If an updated
+source fails these checks, consult the codebook instead of bypassing the checks.
+If a different extract already exists, rename it before preparing another one.
+
+5. COMMON PROBLEMS
+
+ModuleNotFoundError: check sys.executable, install requirements into that Python,
+then restart the kernel. statsmodels, pyreadstat, and py7zr are additions to Week 1.
+
+FileNotFoundError: check the Jupyter file browser and the current working folder:
+  from pathlib import Path
+  print(Path.cwd())
+The notebook folder should contain data/wdi_population.csv and
+data/wpp_life_tables.csv. The RLMS CSV appears only after local preparation.
+
+NameError: run the earlier cells that create the variable. Variables do not move
+between notebooks automatically. After Restart Kernel, run the notebook from
+the beginning. Student exercise cells are empty until you write the code.
+
+SyntaxError: check straight quotes, matching brackets, commas, and indentation.
+Use a decimal point in Python code, not a decimal comma.
+
+Seaborn 'errorbar' argument not recognised: update packages using requirements.txt
+and restart the kernel. The exercises require seaborn 0.13 or later.
+
+RLMS download contains no expected columns: check that you chose English
+longitudinal individual Stata data, not households or an SPSS file.
+
+No free temporary space: use a drive with enough space or pass an existing .dta.
+Do not delete unrelated personal files to make room automatically.
+
+An unexpected count after a new RLMS release: compare the local provenance files.
+Revisions can change records; do not edit observations to force an old answer.
+
+6. SAVE YOUR WORK
+
+Keep code and interpretation together in the notebook. Figures can be saved in
+outputs/. Before sharing a research result, restart the kernel and run the code
+from the beginning. Publish code, source instructions, and aggregate results;
+do not upload RLMS microdata. Do not include raw data in LLM prompts.

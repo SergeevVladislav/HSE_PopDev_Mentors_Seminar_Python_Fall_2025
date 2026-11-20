@@ -1,0 +1,1159 @@
+{
+  "prepared_on": "2026-11-20",
+  "wpp": {
+    "source_file": "WPP2024_Life_Table_Abridged_Medium_1950-2023.csv.zip",
+    "source_archive_sha256": "1d0a41dfcdd8656acf090fb1d936b91520aa2e3c293c065db596dd16fd889478",
+    "citation": "United Nations, Department of Economic and Social Affairs, Population Division (2024). World Population Prospects 2024. Online Edition.",
+    "source_url": "https://population.un.org/wpp/",
+    "countries": [
+      "DEU",
+      "ITA",
+      "JPN",
+      "RUS"
+    ],
+    "years": [
+      2000,
+      2023
+    ],
+    "rows": 6336,
+    "transformations": [
+      "Filter original course archive by ISO3_code and inclusive year range.",
+      "Keep selected original columns; sort by country, year, sex, age. No value imputation or life-table recomputation."
+    ],
+    "download_url": "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20%28Standard%29/CSV_FILES/WPP2024_Life_Table_Abridged_Medium_1950-2023.csv.gz",
+    "original_archive_retrieval_date": "unknown; pre-existing course archive"
+  },
+  "wdi": {
+    "retrieved_utc": "2026-11-17T10:25:17+00:00",
+    "selection": {
+      "country_codes": [
+        "BRA",
+        "CHN",
+        "DEU",
+        "IND",
+        "JPN",
+        "MEX",
+        "RUS",
+        "ZAF"
+      ],
+      "years": [
+        2010,
+        2015,
+        2020,
+        2023
+      ]
+    },
+    "csv_sha256": "200e379946bc2041bf605be8ec4333b13d33f86a2b64fc5f4655f76db33542b1",
+    "note": "Unmodified API values; only countries, years and columns selected. No imputation.",
+    "sources": [
+      {
+        "column": "population",
+        "indicator": "SP.POP.TOTL",
+        "url": "https://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv",
+        "api_metadata": {
+          "download_file": "API_SP.POP.TOTL_DS2_en_csv_v2_58181.csv",
+          "preamble": [
+            "\"Data Source\",\"World Development Indicators\",",
+            "",
+            "\"Last Updated Date\",\"2026-11-11\",",
+            ""
+          ],
+          "archive_sha256": "f9340a4c8ffad67dfd6b50b6753e234c15f4024611687f3ff22a55cd6d275fde"
+        },
+        "selected_observations": [
+          {
+            "countryiso3code": "BRA",
+            "country": {
+              "value": "Brazil"
+            },
+            "date": "2010",
+            "value": 193701929.0
+          },
+          {
+            "countryiso3code": "BRA",
+            "country": {
+              "value": "Brazil"
+            },
+            "date": "2015",
+            "value": 201675532.0
+          },
+          {
+            "countryiso3code": "BRA",
+            "country": {
+              "value": "Brazil"
+            },
+            "date": "2020",
+            "value": 208660842.0
+          },
+          {
+            "countryiso3code": "BRA",
+            "country": {
+              "value": "Brazil"
+            },
+            "date": "2023",
+            "value": 211140729.0
+          },
+          {
+            "countryiso3code": "CHN",
+            "country": {
+              "value": "China"
+            },
+            "date": "2010",
+            "value": 1337705000.0
+          },
+          {
+            "countryiso3code": "CHN",
+            "country": {
+              "value": "China"
+            },
+            "date": "2015",
+            "value": 1379860000.0
+          },
+          {
+            "countryiso3code": "CHN",
+            "country": {
+              "value": "China"
+            },
+            "date": "2020",
+            "value": 1411100000.0
+          },
+          {
+            "countryiso3code": "CHN",
+            "country": {
+              "value": "China"
+            },
+            "date": "2023",
+            "value": 1410710000.0
+          },
+          {
+            "countryiso3code": "DEU",
+            "country": {
+              "value": "Germany"
+            },
+            "date": "2010",
+            "value": 81776930.0
+          },
+          {
+            "countryiso3code": "DEU",
+            "country": {
+              "value": "Germany"
+            },
+            "date": "2015",
+            "value": 81686611.0
+          },
+          {
+            "countryiso3code": "DEU",
+            "country": {
+              "value": "Germany"
+            },
+            "date": "2020",
+            "value": 83160871.0
+          },
+          {
+            "countryiso3code": "DEU",
+            "country": {
+              "value": "Germany"
+            },
+            "date": "2023",
+            "value": 83287273.0
+          },
+          {
+            "countryiso3code": "IND",
+            "country": {
+              "value": "India"
+            },
+            "date": "2010",
+            "value": 1243481564.0
+          },
+          {
+            "countryiso3code": "IND",
+            "country": {
+              "value": "India"
+            },
+            "date": "2015",
+            "value": 1328024498.0
+          },
+          {
+            "countryiso3code": "IND",
+            "country": {
+              "value": "India"
+            },
+            "date": "2020",
+            "value": 1402617695.0
+          },
+          {
+            "countryiso3code": "IND",
+            "country": {
+              "value": "India"
+            },
+            "date": "2023",
+            "value": 1438069596.0
+          },
+          {
+            "countryiso3code": "JPN",
+            "country": {
+              "value": "Japan"
+            },
+            "date": "2010",
+            "value": 128070000.0
+          },
+          {
+            "countryiso3code": "JPN",
+            "country": {
+              "value": "Japan"
+            },
+            "date": "2015",
+            "value": 127141000.0
+          },
+          {
+            "countryiso3code": "JPN",
+            "country": {
+              "value": "Japan"
+            },
+            "date": "2020",
+            "value": 126261000.0
+          },
+          {
+            "countryiso3code": "JPN",
+            "country": {
+              "value": "Japan"
+            },
+            "date": "2023",
+            "value": 124516650.0
+          },
+          {
+            "countryiso3code": "MEX",
+            "country": {
+              "value": "Mexico"
+            },
+            "date": "2010",
+            "value": 113623895.0
+          },
+          {
+            "countryiso3code": "MEX",
+            "country": {
+              "value": "Mexico"
+            },
+            "date": "2015",
+            "value": 121072306.0
+          },
+          {
+            "countryiso3code": "MEX",
+            "country": {
+              "value": "Mexico"
+            },
+            "date": "2020",
+            "value": 126799054.0
+          },
+          {
+            "countryiso3code": "MEX",
+            "country": {
+              "value": "Mexico"
+            },
+            "date": "2023",
+            "value": 129739759.0
+          },
+          {
+            "countryiso3code": "RUS",
+            "country": {
+              "value": "Russian Federation"
+            },
+            "date": "2010",
+            "value": 142849468.0
+          },
+          {
+            "countryiso3code": "RUS",
+            "country": {
+              "value": "Russian Federation"
+            },
+            "date": "2015",
+            "value": 144640716.0
+          },
+          {
+            "countryiso3code": "RUS",
+            "country": {
+              "value": "Russian Federation"
+            },
+            "date": "2020",
+            "value": 145245148.0
+          },
+          {
+            "countryiso3code": "RUS",
+            "country": {
+              "value": "Russian Federation"
+            },
+            "date": "2023",
+            "value": 143826130.0
+          },
+          {
+            "countryiso3code": "ZAF",
+            "country": {
+              "value": "South Africa"
+            },
+            "date": "2010",
+            "value": 52344051.0
+          },
+          {
+            "countryiso3code": "ZAF",
+            "country": {
+              "value": "South Africa"
+            },
+            "date": "2015",
+            "value": 56723537.0
+          },
+          {
+            "countryiso3code": "ZAF",
+            "country": {
+              "value": "South Africa"
+            },
+            "date": "2020",
+            "value": 60562381.0
+          },
+          {
+            "countryiso3code": "ZAF",
+            "country": {
+              "value": "South Africa"
+            },
+            "date": "2023",
+            "value": 63212384.0
+          }
+        ]
+      },
+      {
+        "column": "share_65_plus",
+        "indicator": "SP.POP.65UP.TO.ZS",
+        "url": "https://api.worldbank.org/v2/en/indicator/SP.POP.65UP.TO.ZS?downloadformat=csv",
+        "api_metadata": {
+          "download_file": "API_SP.POP.65UP.TO.ZS_DS2_en_csv_v2_62404.csv",
+          "preamble": [
+            "\"Data Source\",\"World Development Indicators\",",
+            "",
+            "\"Last Updated Date\",\"2026-11-11\",",
+            ""
+          ],
+          "archive_sha256": "3aa0d77bbe1c4ae5e5c86a7db275c0ddc2f73310310f90467781013926d5f228"
+        },
+        "selected_observations": [
+          {
+            "countryiso3code": "BRA",
+            "country": {
+              "value": "Brazil"
+            },
+            "date": "2010",
+            "value": 6.66688609315066
+          },
+          {
+            "countryiso3code": "BRA",
+            "country": {
+              "value": "Brazil"
+            },
+            "date": "2015",
+            "value": 7.95680732355772
+          },
+          {
+            "countryiso3code": "BRA",
+            "country": {
+              "value": "Brazil"
+            },
+            "date": "2020",
+            "value": 9.59866487647293
+          },
+          {
+            "countryiso3code": "BRA",
+            "country": {
+              "value": "Brazil"
+            },
+            "date": "2023",
+            "value": 10.6336314676644
+          },
+          {
+            "countryiso3code": "CHN",
+            "country": {
+              "value": "China"
+            },
+            "date": "2010",
+            "value": 8.66147143784386
+          },
+          {
+            "countryiso3code": "CHN",
+            "country": {
+              "value": "China"
+            },
+            "date": "2015",
+            "value": 10.053420914992
+          },
+          {
+            "countryiso3code": "CHN",
+            "country": {
+              "value": "China"
+            },
+            "date": "2020",
+            "value": 12.6452376078587
+          },
+          {
+            "countryiso3code": "CHN",
+            "country": {
+              "value": "China"
+            },
+            "date": "2023",
+            "value": 14.3160774690688
+          },
+          {
+            "countryiso3code": "DEU",
+            "country": {
+              "value": "Germany"
+            },
+            "date": "2010",
+            "value": 20.5654453486144
+          },
+          {
+            "countryiso3code": "DEU",
+            "country": {
+              "value": "Germany"
+            },
+            "date": "2015",
+            "value": 21.0533536816501
+          },
+          {
+            "countryiso3code": "DEU",
+            "country": {
+              "value": "Germany"
+            },
+            "date": "2020",
+            "value": 21.8447281174981
+          },
+          {
+            "countryiso3code": "DEU",
+            "country": {
+              "value": "Germany"
+            },
+            "date": "2023",
+            "value": 22.7900439454493
+          },
+          {
+            "countryiso3code": "IND",
+            "country": {
+              "value": "India"
+            },
+            "date": "2010",
+            "value": 4.94044719106105
+          },
+          {
+            "countryiso3code": "IND",
+            "country": {
+              "value": "India"
+            },
+            "date": "2015",
+            "value": 5.46921307827757
+          },
+          {
+            "countryiso3code": "IND",
+            "country": {
+              "value": "India"
+            },
+            "date": "2020",
+            "value": 6.41685302336898
+          },
+          {
+            "countryiso3code": "IND",
+            "country": {
+              "value": "India"
+            },
+            "date": "2023",
+            "value": 6.92184330138637
+          },
+          {
+            "countryiso3code": "JPN",
+            "country": {
+              "value": "Japan"
+            },
+            "date": "2010",
+            "value": 23.0980258847984
+          },
+          {
+            "countryiso3code": "JPN",
+            "country": {
+              "value": "Japan"
+            },
+            "date": "2015",
+            "value": 26.9230034152781
+          },
+          {
+            "countryiso3code": "JPN",
+            "country": {
+              "value": "Japan"
+            },
+            "date": "2020",
+            "value": 28.9181743842737
+          },
+          {
+            "countryiso3code": "JPN",
+            "country": {
+              "value": "Japan"
+            },
+            "date": "2023",
+            "value": 29.5618100807812
+          },
+          {
+            "countryiso3code": "MEX",
+            "country": {
+              "value": "Mexico"
+            },
+            "date": "2010",
+            "value": 6.09750132223508
+          },
+          {
+            "countryiso3code": "MEX",
+            "country": {
+              "value": "Mexico"
+            },
+            "date": "2015",
+            "value": 6.65084837815842
+          },
+          {
+            "countryiso3code": "MEX",
+            "country": {
+              "value": "Mexico"
+            },
+            "date": "2020",
+            "value": 7.48607987451515
+          },
+          {
+            "countryiso3code": "MEX",
+            "country": {
+              "value": "Mexico"
+            },
+            "date": "2023",
+            "value": 7.98664578990007
+          },
+          {
+            "countryiso3code": "RUS",
+            "country": {
+              "value": "Russian Federation"
+            },
+            "date": "2010",
+            "value": 12.7006113070257
+          },
+          {
+            "countryiso3code": "RUS",
+            "country": {
+              "value": "Russian Federation"
+            },
+            "date": "2015",
+            "value": 13.534464750748
+          },
+          {
+            "countryiso3code": "RUS",
+            "country": {
+              "value": "Russian Federation"
+            },
+            "date": "2020",
+            "value": 15.4721422383228
+          },
+          {
+            "countryiso3code": "RUS",
+            "country": {
+              "value": "Russian Federation"
+            },
+            "date": "2023",
+            "value": 16.6046427349856
+          },
+          {
+            "countryiso3code": "ZAF",
+            "country": {
+              "value": "South Africa"
+            },
+            "date": "2010",
+            "value": 5.24736994467623
+          },
+          {
+            "countryiso3code": "ZAF",
+            "country": {
+              "value": "South Africa"
+            },
+            "date": "2015",
+            "value": 5.36961143105032
+          },
+          {
+            "countryiso3code": "ZAF",
+            "country": {
+              "value": "South Africa"
+            },
+            "date": "2020",
+            "value": 6.10948899119405
+          },
+          {
+            "countryiso3code": "ZAF",
+            "country": {
+              "value": "South Africa"
+            },
+            "date": "2023",
+            "value": 6.51509367622564
+          }
+        ]
+      },
+      {
+        "column": "life_expectancy",
+        "indicator": "SP.DYN.LE00.IN",
+        "url": "https://api.worldbank.org/v2/en/indicator/SP.DYN.LE00.IN?downloadformat=csv",
+        "api_metadata": {
+          "download_file": "API_SP.DYN.LE00.IN_DS2_en_csv_v2_70864.csv",
+          "preamble": [
+            "\"Data Source\",\"World Development Indicators\",",
+            "",
+            "\"Last Updated Date\",\"2026-11-11\",",
+            ""
+          ],
+          "archive_sha256": "34347df4a917fa8128269ed8a1cf9f9aa90eea93a463307cab9cb2fab10028b5"
+        },
+        "selected_observations": [
+          {
+            "countryiso3code": "BRA",
+            "country": {
+              "value": "Brazil"
+            },
+            "date": "2010",
+            "value": 73.779
+          },
+          {
+            "countryiso3code": "BRA",
+            "country": {
+              "value": "Brazil"
+            },
+            "date": "2015",
+            "value": 75.106
+          },
+          {
+            "countryiso3code": "BRA",
+            "country": {
+              "value": "Brazil"
+            },
+            "date": "2020",
+            "value": 74.506
+          },
+          {
+            "countryiso3code": "BRA",
+            "country": {
+              "value": "Brazil"
+            },
+            "date": "2023",
+            "value": 75.848
+          },
+          {
+            "countryiso3code": "CHN",
+            "country": {
+              "value": "China"
+            },
+            "date": "2010",
+            "value": 75.668
+          },
+          {
+            "countryiso3code": "CHN",
+            "country": {
+              "value": "China"
+            },
+            "date": "2015",
+            "value": 76.975
+          },
+          {
+            "countryiso3code": "CHN",
+            "country": {
+              "value": "China"
+            },
+            "date": "2020",
+            "value": 78.019
+          },
+          {
+            "countryiso3code": "CHN",
+            "country": {
+              "value": "China"
+            },
+            "date": "2023",
+            "value": 77.953
+          },
+          {
+            "countryiso3code": "DEU",
+            "country": {
+              "value": "Germany"
+            },
+            "date": "2010",
+            "value": 79.9878048780488
+          },
+          {
+            "countryiso3code": "DEU",
+            "country": {
+              "value": "Germany"
+            },
+            "date": "2015",
+            "value": 80.6414634146341
+          },
+          {
+            "countryiso3code": "DEU",
+            "country": {
+              "value": "Germany"
+            },
+            "date": "2020",
+            "value": 81.0414634146342
+          },
+          {
+            "countryiso3code": "DEU",
+            "country": {
+              "value": "Germany"
+            },
+            "date": "2023",
+            "value": 81.0414634146342
+          },
+          {
+            "countryiso3code": "IND",
+            "country": {
+              "value": "India"
+            },
+            "date": "2010",
+            "value": 67.162
+          },
+          {
+            "countryiso3code": "IND",
+            "country": {
+              "value": "India"
+            },
+            "date": "2015",
+            "value": 69.326
+          },
+          {
+            "countryiso3code": "IND",
+            "country": {
+              "value": "India"
+            },
+            "date": "2020",
+            "value": 70.156
+          },
+          {
+            "countryiso3code": "IND",
+            "country": {
+              "value": "India"
+            },
+            "date": "2023",
+            "value": 72.003
+          },
+          {
+            "countryiso3code": "JPN",
+            "country": {
+              "value": "Japan"
+            },
+            "date": "2010",
+            "value": 82.8426829268293
+          },
+          {
+            "countryiso3code": "JPN",
+            "country": {
+              "value": "Japan"
+            },
+            "date": "2015",
+            "value": 83.7939024390244
+          },
+          {
+            "countryiso3code": "JPN",
+            "country": {
+              "value": "Japan"
+            },
+            "date": "2020",
+            "value": 84.56
+          },
+          {
+            "countryiso3code": "JPN",
+            "country": {
+              "value": "Japan"
+            },
+            "date": "2023",
+            "value": 84.0412195121951
+          },
+          {
+            "countryiso3code": "MEX",
+            "country": {
+              "value": "Mexico"
+            },
+            "date": "2010",
+            "value": 73.718
+          },
+          {
+            "countryiso3code": "MEX",
+            "country": {
+              "value": "Mexico"
+            },
+            "date": "2015",
+            "value": 74.431
+          },
+          {
+            "countryiso3code": "MEX",
+            "country": {
+              "value": "Mexico"
+            },
+            "date": "2020",
+            "value": 70.449
+          },
+          {
+            "countryiso3code": "MEX",
+            "country": {
+              "value": "Mexico"
+            },
+            "date": "2023",
+            "value": 75.069
+          },
+          {
+            "countryiso3code": "RUS",
+            "country": {
+              "value": "Russian Federation"
+            },
+            "date": "2010",
+            "value": 68.8412195121951
+          },
+          {
+            "countryiso3code": "RUS",
+            "country": {
+              "value": "Russian Federation"
+            },
+            "date": "2015",
+            "value": 71.1834146341463
+          },
+          {
+            "countryiso3code": "RUS",
+            "country": {
+              "value": "Russian Federation"
+            },
+            "date": "2020",
+            "value": 71.3387804878049
+          },
+          {
+            "countryiso3code": "RUS",
+            "country": {
+              "value": "Russian Federation"
+            },
+            "date": "2023",
+            "value": 73.2546341463415
+          },
+          {
+            "countryiso3code": "ZAF",
+            "country": {
+              "value": "South Africa"
+            },
+            "date": "2010",
+            "value": 58.886
+          },
+          {
+            "countryiso3code": "ZAF",
+            "country": {
+              "value": "South Africa"
+            },
+            "date": "2015",
+            "value": 64.053
+          },
+          {
+            "countryiso3code": "ZAF",
+            "country": {
+              "value": "South Africa"
+            },
+            "date": "2020",
+            "value": 65.15
+          },
+          {
+            "countryiso3code": "ZAF",
+            "country": {
+              "value": "South Africa"
+            },
+            "date": "2023",
+            "value": 66.139
+          }
+        ]
+      },
+      {
+        "column": "urban_share",
+        "indicator": "SP.URB.TOTL.IN.ZS",
+        "url": "https://api.worldbank.org/v2/en/indicator/SP.URB.TOTL.IN.ZS?downloadformat=csv",
+        "api_metadata": {
+          "download_file": "API_SP.URB.TOTL.IN.ZS_DS2_en_csv_v2_68039.csv",
+          "preamble": [
+            "\"Data Source\",\"World Development Indicators\",",
+            "",
+            "\"Last Updated Date\",\"2026-11-11\",",
+            ""
+          ],
+          "archive_sha256": "0f0f5e09134f35e4d8986f08497915809728a1112e9ea59e7b3b450ad5b238c6"
+        },
+        "selected_observations": [
+          {
+            "countryiso3code": "BRA",
+            "country": {
+              "value": "Brazil"
+            },
+            "date": "2010",
+            "value": 84.343846036308
+          },
+          {
+            "countryiso3code": "BRA",
+            "country": {
+              "value": "Brazil"
+            },
+            "date": "2015",
+            "value": 85.6935697061881
+          },
+          {
+            "countryiso3code": "BRA",
+            "country": {
+              "value": "Brazil"
+            },
+            "date": "2020",
+            "value": 86.9112186503004
+          },
+          {
+            "countryiso3code": "BRA",
+            "country": {
+              "value": "Brazil"
+            },
+            "date": "2023",
+            "value": 87.6159710235763
+          },
+          {
+            "countryiso3code": "CHN",
+            "country": {
+              "value": "China"
+            },
+            "date": "2010",
+            "value": 49.2340270628041
+          },
+          {
+            "countryiso3code": "CHN",
+            "country": {
+              "value": "China"
+            },
+            "date": "2015",
+            "value": 57.3297843933105
+          },
+          {
+            "countryiso3code": "CHN",
+            "country": {
+              "value": "China"
+            },
+            "date": "2020",
+            "value": 63.5234230266258
+          },
+          {
+            "countryiso3code": "CHN",
+            "country": {
+              "value": "China"
+            },
+            "date": "2023",
+            "value": 65.5301448035523
+          },
+          {
+            "countryiso3code": "DEU",
+            "country": {
+              "value": "Germany"
+            },
+            "date": "2010",
+            "value": 80.305702559949
+          },
+          {
+            "countryiso3code": "DEU",
+            "country": {
+              "value": "Germany"
+            },
+            "date": "2015",
+            "value": 80.6974371632814
+          },
+          {
+            "countryiso3code": "DEU",
+            "country": {
+              "value": "Germany"
+            },
+            "date": "2020",
+            "value": 81.4700055002738
+          },
+          {
+            "countryiso3code": "DEU",
+            "country": {
+              "value": "Germany"
+            },
+            "date": "2023",
+            "value": 81.9034366692129
+          },
+          {
+            "countryiso3code": "IND",
+            "country": {
+              "value": "India"
+            },
+            "date": "2010",
+            "value": 30.9042190810094
+          },
+          {
+            "countryiso3code": "IND",
+            "country": {
+              "value": "India"
+            },
+            "date": "2015",
+            "value": 32.5472990022299
+          },
+          {
+            "countryiso3code": "IND",
+            "country": {
+              "value": "India"
+            },
+            "date": "2020",
+            "value": 34.1286726088333
+          },
+          {
+            "countryiso3code": "IND",
+            "country": {
+              "value": "India"
+            },
+            "date": "2023",
+            "value": 35.0676918424186
+          },
+          {
+            "countryiso3code": "JPN",
+            "country": {
+              "value": "Japan"
+            },
+            "date": "2010",
+            "value": 90.6228586840649
+          },
+          {
+            "countryiso3code": "JPN",
+            "country": {
+              "value": "Japan"
+            },
+            "date": "2015",
+            "value": 91.3532644103625
+          },
+          {
+            "countryiso3code": "JPN",
+            "country": {
+              "value": "Japan"
+            },
+            "date": "2020",
+            "value": 91.7809926267889
+          },
+          {
+            "countryiso3code": "JPN",
+            "country": {
+              "value": "Japan"
+            },
+            "date": "2023",
+            "value": 92.0826903891473
+          },
+          {
+            "countryiso3code": "MEX",
+            "country": {
+              "value": "Mexico"
+            },
+            "date": "2010",
+            "value": 76.5244441414713
+          },
+          {
+            "countryiso3code": "MEX",
+            "country": {
+              "value": "Mexico"
+            },
+            "date": "2015",
+            "value": 77.1903854182753
+          },
+          {
+            "countryiso3code": "MEX",
+            "country": {
+              "value": "Mexico"
+            },
+            "date": "2020",
+            "value": 78.677960602824
+          },
+          {
+            "countryiso3code": "MEX",
+            "country": {
+              "value": "Mexico"
+            },
+            "date": "2023",
+            "value": 79.4734935748046
+          },
+          {
+            "countryiso3code": "RUS",
+            "country": {
+              "value": "Russian Federation"
+            },
+            "date": "2010",
+            "value": 73.6696307887624
+          },
+          {
+            "countryiso3code": "RUS",
+            "country": {
+              "value": "Russian Federation"
+            },
+            "date": "2015",
+            "value": 74.275919065527
+          },
+          {
+            "countryiso3code": "RUS",
+            "country": {
+              "value": "Russian Federation"
+            },
+            "date": "2020",
+            "value": 74.6932216791674
+          },
+          {
+            "countryiso3code": "RUS",
+            "country": {
+              "value": "Russian Federation"
+            },
+            "date": "2023",
+            "value": 74.9805047873279
+          },
+          {
+            "countryiso3code": "ZAF",
+            "country": {
+              "value": "South Africa"
+            },
+            "date": "2010",
+            "value": 62.6299120560569
+          },
+          {
+            "countryiso3code": "ZAF",
+            "country": {
+              "value": "South Africa"
+            },
+            "date": "2015",
+            "value": 63.2096349937231
+          },
+          {
+            "countryiso3code": "ZAF",
+            "country": {
+              "value": "South Africa"
+            },
+            "date": "2020",
+            "value": 63.4373088310982
+          },
+          {
+            "countryiso3code": "ZAF",
+            "country": {
+              "value": "South Africa"
+            },
+            "date": "2023",
+            "value": 63.5823705163545
+          }
+        ]
+      }
+    ]
+  },
+  "public_files": {
+    "wdi_population.csv": {
+      "sha256": "200e379946bc2041bf605be8ec4333b13d33f86a2b64fc5f4655f76db33542b1",
+      "bytes": 2486
+    },
+    "wpp_life_tables.csv": {
+      "sha256": "090d6014655e0e7e3974909b518a5c896fa54f6b7304b02aae3cb94e0a65635b",
+      "bytes": 784708
+    }
+  },
+  "rlms": {
+    "distribution": "not included; user downloads through provider and prepares locally",
+    "year": 2024,
+    "preparer": "prepare_rlms.py",
+    "source": "https://www.hse.ru/en/rlms/downloads"
+  }
+}

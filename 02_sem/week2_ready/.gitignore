@@ -1,0 +1,19 @@
+# Track only the student distribution.
+/*
+!/.gitignore
+!/README.md
+!/SETUP_EN.txt
+!/requirements.txt
+!/prepare_rlms.py
+!/Week2_Visualization_Demography_Earnings.pdf
+!/00_setup_check.ipynb
+!/01_visualization_student.ipynb
+!/02_demography_student.ipynb
+!/03_earnings_student.ipynb
+!/student_materials.zip
+!/data/
+/data/*
+!/data/README.md
+!/data/wdi_population.csv
+!/data/wpp_life_tables.csv
+!/data/provenance.json
