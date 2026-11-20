@@ -17,6 +17,8 @@ Python for demographic analysis, public administration, and the foundations of e
 Download and extract [student_materials.zip](student_materials.zip).
 Keep the notebooks and the `data` folder together. The exercise notebooks contain task descriptions and empty code cells.
 
+The [Week 1 worked solutions](../README.md#worked-solutions) cover the main and additional exercises in all four notebooks.
+
 ## Analytical questions
 
 | Area | Example question | Concepts |

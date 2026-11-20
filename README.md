@@ -11,6 +11,7 @@ Python materials for demographic analysis, public administration, and econometri
 - [NumPy](01_sem/day1_ready/02_numpy_student.ipynb)
 - [pandas](01_sem/day1_ready/03_pandas_student.ipynb)
 - [Matplotlib and seaborn](01_sem/day1_ready/04_visualization_student.ipynb)
+- [Worked solutions for all Week 1 exercises](01_sem/README.md#worked-solutions)
 - [Download the materials](01_sem/day1_ready/student_materials.zip)
 
 The archive includes notebooks, the presentation, installation instructions, and local World Bank and Adult datasets.

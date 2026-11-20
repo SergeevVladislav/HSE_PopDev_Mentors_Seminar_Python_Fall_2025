@@ -17,6 +17,17 @@ Python for demographic analysis, public administration, and the foundations of e
 Download and extract [student_materials.zip](day1_ready/student_materials.zip).
 Keep the notebooks and the `data` folder together. The exercise notebooks contain task descriptions and empty code cells.
 
+## Worked solutions
+
+| Notebook | Exercises |
+|---|---|
+| [Python basics](day1_ready/01_python_basics_solutions.ipynb) | PY-01 to PY-07, PY-X1 and PY-X2 |
+| [NumPy](day1_ready/02_numpy_solutions.ipynb) | NP-01 to NP-03 and NP-X1 |
+| [pandas](day1_ready/03_pandas_solutions.ipynb) | PD-01 to PD-05, including PD-01b, plus PD-X1 and PD-X2 |
+| [Matplotlib and seaborn](day1_ready/04_visualization_solutions.ipynb) | VIS-01 to VIS-04, VIS-X1 and VIS-X2 |
+
+Open a notebook on GitHub to see the code and results. To run it locally with the student archive, download the notebook into the extracted `popdev_week1` folder alongside `data/`.
+
 ## Analytical questions
 
 | Area | Example question | Concepts |
