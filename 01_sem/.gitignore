@@ -22,3 +22,7 @@
 !/data/wdi_population.csv
 !/data/wdi_provenance.json
 !/data/DATA_NOTE_EN.txt
+!/day1_ready/
+/day1_ready/*
+!/day1_ready/README.md
+!/day1_ready/FINAL_PROJECT.md

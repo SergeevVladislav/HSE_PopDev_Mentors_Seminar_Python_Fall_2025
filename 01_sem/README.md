@@ -2,31 +2,26 @@
 
 Python for demographic analysis, public administration, and the foundations of econometrics.
 
+## Worked solutions
+
+| Topic | Exercises | Worked solutions |
+|---|---|---|
+| Python basics | [Variables, loops, and functions](01_python_basics_student.ipynb) | [Python solutions](01_python_basics_solutions.ipynb) |
+| NumPy | [Arrays, masks, and population shares](02_numpy_student.ipynb) | [NumPy solutions](02_numpy_solutions.ipynb) |
+| pandas | [Demographic tables and group summaries](03_pandas_student.ipynb) | [pandas solutions](03_pandas_solutions.ipynb) |
+| Matplotlib and seaborn | [Charts and figure export](04_visualization_student.ipynb) | [Visualisation solutions](04_visualization_solutions.ipynb) |
+
+The solutions cover all 27 exercises, including the additional exercises. Open a solution on GitHub to see the code and results.
+
 ## Materials
+
+Download and extract [the Week 1 archive with exercises, solutions, and datasets](student_materials.zip?raw=1). Keep the notebooks and the `data` folder together.
 
 | Material | Contents |
 |---|---|
-| [Final research project](day1_ready/FINAL_PROJECT.md) | Requirements, academic integrity, Python analysis, and public GitHub submission. |
-| [Introduction](day1_ready/Intro_Seminar_Week1.pdf) | Population indicators, policy questions, research design, and reproducible analysis. |
-| [Python](day1_ready/01_python_basics_student.ipynb) | Variables, types, lists, dictionaries, conditions, loops, and functions. |
-| [NumPy](day1_ready/02_numpy_student.ipynb) | Arrays, arithmetic, Boolean masks, and population shares. |
-| [pandas](day1_ready/03_pandas_student.ipynb) | Loading, checking, filtering, transforming, and summarising data. |
-| [Matplotlib and seaborn](day1_ready/04_visualization_student.ipynb) | Line charts, bar charts, scatter plots, histograms, and figure export. |
-| [Environment check](day1_ready/00_setup_check.ipynb) | Python interpreter, package versions, and local data paths. |
-
-Download and extract [student_materials.zip](day1_ready/student_materials.zip).
-Keep the notebooks and the `data` folder together. The exercise notebooks contain task descriptions and empty code cells.
-
-## Worked solutions
-
-| Notebook | Exercises |
-|---|---|
-| [Python basics](day1_ready/01_python_basics_solutions.ipynb) | PY-01 to PY-07, PY-X1 and PY-X2 |
-| [NumPy](day1_ready/02_numpy_solutions.ipynb) | NP-01 to NP-03 and NP-X1 |
-| [pandas](day1_ready/03_pandas_solutions.ipynb) | PD-01 to PD-05, including PD-01b, plus PD-X1 and PD-X2 |
-| [Matplotlib and seaborn](day1_ready/04_visualization_solutions.ipynb) | VIS-01 to VIS-04, VIS-X1 and VIS-X2 |
-
-Open a notebook on GitHub to see the code and results. To run it locally with the student archive, download the notebook into the extracted `popdev_week1` folder alongside `data/`.
+| [Final research project](FINAL_PROJECT.md) | Requirements, academic integrity, Python analysis, and public GitHub submission. |
+| [Introduction](Intro_Seminar_Week1.pdf) | Population indicators, policy questions, research design, and reproducible analysis. |
+| [Environment check](00_setup_check.ipynb) | Python interpreter, package versions, and local data paths. |
 
 ## Analytical questions
 
@@ -47,9 +42,13 @@ popdev_week1/
 ├── Intro_Seminar_Week1.pdf
 ├── 00_setup_check.ipynb
 ├── 01_python_basics_student.ipynb
+├── 01_python_basics_solutions.ipynb
 ├── 02_numpy_student.ipynb
+├── 02_numpy_solutions.ipynb
 ├── 03_pandas_student.ipynb
+├── 03_pandas_solutions.ipynb
 ├── 04_visualization_student.ipynb
+├── 04_visualization_solutions.ipynb
 └── data/
     ├── wdi_population.csv
     ├── wdi_provenance.json
@@ -58,7 +57,7 @@ popdev_week1/
 ```
 
 Use `popdev_week1` as the working directory after extracting the archive.
-For a clone or download of the full repository, use `01_sem/day1_ready`.
+For a clone or download of the full repository, use `01_sem`.
 Run the terminal commands below from that directory.
 
 ## Python and Jupyter setup
@@ -191,7 +190,7 @@ The environment check contains executable diagnostic cells. The exercise noteboo
 
 ### World Bank demographic indicators
 
-[Download the prepared CSV](day1_ready/data/wdi_population.csv?raw=1).
+[Download the prepared CSV](data/wdi_population.csv?raw=1).
 The same file is included in the materials archive at `data/wdi_population.csv`.
 
 The file contains **32 rows and 7 columns**: Brazil, China, Germany, India, Japan, Mexico, the Russian Federation, and South Africa, each observed in **2010, 2015, 2020, and 2023**.
@@ -219,7 +218,7 @@ Original sources and downloads:
 To reconstruct the extract, download and unpack the four indicator archives. Read each `API_*.csv` file after its metadata preamble; keep country codes `BRA`, `CHN`, `DEU`, `IND`, `JPN`, `MEX`, `RUS`, and `ZAF`, and year columns `2010`, `2015`, `2020`, and `2023`. Reshape years into rows, join the indicators on country code and year, and use the column names above. The original downloads contain more countries and years than the prepared file.
 
 The saved extract was retrieved on **17 November 2026**. No missing values were imputed.
-[Provenance](day1_ready/data/wdi_provenance.json) records source URLs, selected original values, and SHA-256 checksums.
+[Provenance](data/wdi_provenance.json) records source URLs, selected original values, and SHA-256 checksums.
 World Bank downloads may be revised; use the included CSV to reproduce this saved extract exactly.
 
 These eight countries are not a random or representative world sample. Summing populations across different years does not give a single-year total. An unweighted mean of country shares gives every country equal weight; a combined population share requires population weights or sums of the corresponding counts.
@@ -228,7 +227,7 @@ Life expectancy at birth is a period life-table measure, not the average age at 
 
 ### Adult Income
 
-[Download the prepared CSV](day1_ready/data/adult.data.csv?raw=1), also included at `data/adult.data.csv`.
+[Download the prepared CSV](data/adult.data.csv?raw=1), also included at `data/adult.data.csv`.
 Original source: [UCI Adult documentation](https://archive.ics.uci.edu/dataset/2/adult) and [dataset ZIP](https://archive.ics.uci.edu/static/public/2/adult.zip).
 
 The prepared file contains **32,561 historical individual records and 15 columns**.

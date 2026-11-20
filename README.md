@@ -5,16 +5,15 @@ Python materials for demographic analysis, public administration, and econometri
 ## Week 1
 
 - [Materials, installation, and datasets](01_sem/README.md)
-- [Final research project requirements](01_sem/day1_ready/FINAL_PROJECT.md)
-- [Introduction](01_sem/day1_ready/Intro_Seminar_Week1.pdf)
-- [Python basics](01_sem/day1_ready/01_python_basics_student.ipynb)
-- [NumPy](01_sem/day1_ready/02_numpy_student.ipynb)
-- [pandas](01_sem/day1_ready/03_pandas_student.ipynb)
-- [Matplotlib and seaborn](01_sem/day1_ready/04_visualization_student.ipynb)
-- [Worked solutions for all Week 1 exercises](01_sem/README.md#worked-solutions)
-- [Download the materials](01_sem/day1_ready/student_materials.zip)
+- [Final research project requirements](01_sem/FINAL_PROJECT.md)
+- [Introduction](01_sem/Intro_Seminar_Week1.pdf)
+- [Python basics](01_sem/01_python_basics_student.ipynb) · [Solutions](01_sem/01_python_basics_solutions.ipynb)
+- [NumPy](01_sem/02_numpy_student.ipynb) · [Solutions](01_sem/02_numpy_solutions.ipynb)
+- [pandas](01_sem/03_pandas_student.ipynb) · [Solutions](01_sem/03_pandas_solutions.ipynb)
+- [Matplotlib and seaborn](01_sem/04_visualization_student.ipynb) · [Solutions](01_sem/04_visualization_solutions.ipynb)
+- [Download Week 1 with solutions](01_sem/student_materials.zip?raw=1)
 
-The archive includes notebooks, the presentation, installation instructions, and local World Bank and Adult datasets.
+The archive includes exercises and worked solutions, the presentation, installation instructions, and local World Bank and Adult datasets.
 Dataset descriptions, original sources, and download links are in the [Week 1 README](01_sem/README.md#datasets).
 
 ## Week 2

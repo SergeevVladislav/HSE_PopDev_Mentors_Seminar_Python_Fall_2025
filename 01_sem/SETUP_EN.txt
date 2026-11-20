@@ -1,6 +1,6 @@
 # Python and Jupyter setup
 
-Working directory: the extracted popdev_week1 folder, or 01_sem/day1_ready in the repository. It must contain requirements.txt, the notebooks, and data/.
+Working directory: the extracted popdev_week1 folder, or 01_sem in the repository. It must contain requirements.txt, the notebooks, and data/.
 
 
 | Component | Purpose |
