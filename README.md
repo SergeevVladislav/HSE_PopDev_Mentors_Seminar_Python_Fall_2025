@@ -20,10 +20,10 @@ Dataset descriptions, original sources, and download links are in the [Week 1 RE
 
 - [Materials, installation, and datasets](02_sem/week2_ready/README.md)
 - [Visualization, demography, and earnings: presentation](02_sem/week2_ready/Week2_Visualization_Demography_Earnings.pdf)
-- [Matplotlib and seaborn](02_sem/week2_ready/01_visualization_student.ipynb)
-- [Life tables and life expectancy](02_sem/week2_ready/02_demography_student.ipynb)
-- [RLMS-HSE earnings and simple regression](02_sem/week2_ready/03_earnings_student.ipynb)
-- [Download the student materials](02_sem/week2_ready/student_materials.zip)
+- [Matplotlib and seaborn](02_sem/week2_ready/01_visualization_student.ipynb) · [Class solution](02_sem/week2_ready/01_visualization_solutions.ipynb)
+- [Life tables and life expectancy](02_sem/week2_ready/02_demography_student.ipynb) · [Class solution](02_sem/week2_ready/02_demography_solutions.ipynb)
+- [RLMS-HSE earnings and simple regression](02_sem/week2_ready/03_earnings_student.ipynb) · [Class solution](02_sem/week2_ready/03_earnings_solutions.ipynb)
+- [Download Week 2 with class solutions](02_sem/week2_ready/student_materials.zip?raw=1)
 
 The Week 2 archive includes public demographic data. RLMS-HSE microdata must be downloaded from HSE and prepared locally using the included instructions and script.
 

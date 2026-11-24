@@ -8,13 +8,15 @@ Use Python to explore population indicators, read life tables, compare earnings 
 | --- | --- |
 | [Presentation](Week2_Visualization_Demography_Earnings.pdf) | Chart selection, demographic measures, earnings definitions, and regression interpretation |
 | [Setup check](00_setup_check.ipynb) | Python packages, working folder, and data checks |
-| [Visualization](01_visualization_student.ipynb) | Line, bar, and scatter plots; axis labels; figure export |
-| [Demography](02_demography_student.ipynb) | Period life expectancy, survivorship, and remaining lifetime |
-| [Earnings](03_earnings_student.ipynb) | RLMS-HSE data cleaning, descriptive gaps, distributions, and OLS |
-| [Student archive](student_materials.zip) | Notebooks, presentation, setup instructions, and public demographic datasets |
+| [Visualization](01_visualization_student.ipynb) · [Class solution](01_visualization_solutions.ipynb) | Line, bar, and scatter plots; axis labels; figure export |
+| [Demography](02_demography_student.ipynb) · [Class solution](02_demography_solutions.ipynb) | Period life expectancy, survivorship, and remaining lifetime |
+| [Earnings](03_earnings_student.ipynb) · [Class solution](03_earnings_solutions.ipynb) | RLMS-HSE data cleaning, descriptive gaps, distributions, and OLS |
+| [Student archive](student_materials.zip?raw=1) | Exercises, class solutions, presentation, setup instructions, and public demographic datasets |
 | [Data documentation](data/README.md) | Sources, units, response codes, and reproducibility |
 
-The exercise cells are empty. Write your code and interpretations in your own copy of each notebook. Each notebook starts independently; run its cells in order. The earnings notebook includes an optional extension on log earnings and categorical education.
+The class solutions cover V-01–V-05, D-01–D-05, and E-01–E-08. The optional comparison by sex in D-05 and the log-earnings extension E-09 are available for independent practice. Run the RLMS notebook with your local extract to view record previews and individual-level plots.
+
+The student notebooks have empty exercise cells. Write your code and interpretations in your own copy of each notebook. Each notebook starts independently; run its cells in order. The earnings notebook includes an optional extension on log earnings and categorical education.
 
 ## Installation and launch
 
