@@ -6,7 +6,7 @@ Use Python to organise structured qualitative material, compare concepts, and ex
 
 | Material | Contents |
 | --- | --- |
-| [Presentation](Week3_Cultural_Domains_Policy_Evaluation.pdf) | Cultural domains, measurement, policy comparisons, research design, and project requirements |
+| [Presentation](Week3_Cultural_Domains_Policy_Evaluation.pdf) | Anthropological concepts, free lists and pile sorts, worked examples, counterfactuals, DiD, and project requirements |
 | [Environment check](00_setup_check.ipynb) | Package, file, and plotting diagnostics |
 | [Cultural domains](01_cultural_domains_student.ipynb) | Functions, text cleaning, reshaping, frequency, Smith's S, joins, pile sorting, and a heatmap |
 | [Policy evaluation](02_policy_evaluation_student.ipynb) | FTE employment, sample selection, manual DiD, counterfactual plots, regression, and sensitivity |
@@ -63,9 +63,12 @@ LLM help with Python code is allowed when you understand, verify, and disclose i
 
 ## References and Python documentation
 
+- [Borgatti: elicitation techniques for cultural domain analysis](https://qualquant.org/wp-content/uploads/text/1998%20Borgatti115%E2%80%93151.pdf)
+- [Borgatti: cultural domain analysis](https://qualquant.org/wp-content/uploads/cda/Borgatti%201994%20Cultural%20Domain%20Analysis.pdf)
 - [Smith and Borgatti: salience and accuracy](https://qualquant.org/wp-content/uploads/cda/%2Asmith%20and%20borgatti%201997%20salience%20and%20accuracy.pdf)
 - [AnthroTools guide](https://anthrotools.wordpress.com/wp-content/uploads/2016/05/anthrotools_guide.pdf)
 - [Card and Krueger (1994)](https://davidcard.berkeley.edu/papers/njmin-aer.pdf)
+- [Cunningham: difference-in-differences fundamentals](https://mixtape.scunning.com/09-difference_in_differences)
 - [pandas: melt](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.melt.html) and [merge validation](https://pandas.pydata.org/docs/reference/api/pandas.merge.html)
 - [statsmodels: formula examples](https://www.statsmodels.org/stable/example_formulas.html)
 - [MatchIt authors: matching methods and target populations](https://kosukeimai.github.io/MatchIt/articles/matching-methods.html)
