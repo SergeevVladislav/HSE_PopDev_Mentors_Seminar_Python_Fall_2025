@@ -1,0 +1,75 @@
+{
+  "created": "2026-11-24",
+  "card_krueger": {
+    "authors": "David Card and Alan B. Krueger",
+    "year": 1994,
+    "article": "https://davidcard.berkeley.edu/papers/njmin-aer.pdf",
+    "provider": "https://davidcard.berkeley.edu/data_sets",
+    "download": "https://davidcard.berkeley.edu/data_sets/njmin.zip",
+    "provider_readme": "https://davidcard.berkeley.edu/readme/njmin-readme.txt",
+    "archive_sha256": "41a29aec6b489658b20030d044a2b20a5f5a04b871cde41df057afd6013ba587",
+    "archive_member": "public.dat",
+    "codebook_member": "codebook",
+    "transformations": [
+      "Read the fixed-width source using the codebook column positions.",
+      "Treat the source dot missing codes as missing; retain all 410 restaurants.",
+      "Select and rename 13 columns; derive store_id from state and source_sheet because source SHEET=407 occurs in both states. Verify 410 unique composite identifiers.",
+      "No employment aggregation, imputation, or row removal in the distributed CSV."
+    ],
+    "renamed_columns": {
+      "SHEET": "source_sheet",
+      "STATE": "state_nj",
+      "CHAIN": "chain",
+      "CO_OWNED": "company_owned",
+      "STATUS2": "status_after",
+      "EMPFT": "full_time_before",
+      "EMPPT": "part_time_before",
+      "NMGRS": "managers_before",
+      "EMPFT2": "full_time_after",
+      "EMPPT2": "part_time_after",
+      "NMGRS2": "managers_after",
+      "WAGE_ST": "wage_before",
+      "WAGE_ST2": "wage_after"
+    },
+    "measurement": "FTE = full-time employees + managers + 0.5 * part-time employees; calculation is an exercise.",
+    "state_coding": "1 = New Jersey, 0 = Pennsylvania",
+    "periods": "Wave 1: February-March 1992; wave 2: November-December 1992."
+  },
+  "cultural_domain_examples": {
+    "status": "Fully synthetic teaching fixtures authored for this course; no human participants.",
+    "topic": "Support for older residents",
+    "respondents": 24,
+    "construction": "Explicitly authored variable-length lists; two within-list synonym duplicates and inconsistent case/spacing. Age groups have eight fictional respondents each. Six pile templates repeat across the 24 fictional respondents; all sort the same eight cards.",
+    "interpretation": "Demonstrate methods only; no population or public-service findings can be inferred."
+  },
+  "training_example": {
+    "status": "Fully synthetic",
+    "seed": 20261124,
+    "n": 400,
+    "units": "Monthly earnings in arbitrary currency units, not real salaries.",
+    "generation": "Age uniform integers 20..60; baseline earnings clipped normal(2500,650); unemployment months uniform integers 0..18. Participation probability uses logit=-0.2+0.025*(age-40)-0.001*(earnings_before-2500)+0.07*(unemployment_months-9). Outcome=400+0.8*earnings_before+12*age-25*unemployment_months+300*training+normal(0,300).",
+    "interpretation": "The simulation's fixed effect does not guarantee a finite-sample matching estimate equals it; no real programme claim."
+  },
+  "files": {
+    "card_krueger_1992.csv": {
+      "bytes": 22202,
+      "sha256": "9832e550bb9f35c80cb3722f6a34b8a81b4374b9b2dd87ab2a6d6f1050a7c928"
+    },
+    "synthetic_freelists.csv": {
+      "bytes": 1404,
+      "sha256": "753ea665c7bce430cad4ea6c1e9277bf6c6b62d729e30d1261a7f52390758467"
+    },
+    "synthetic_piles.csv": {
+      "bytes": 4155,
+      "sha256": "1f0485291e3d003a27bcda8ff551c1233025fe7ddac74b8a908709deabe346c1"
+    },
+    "synthetic_respondents.csv": {
+      "bytes": 248,
+      "sha256": "f1eadd0a5523c9545c1b6419dc80445caa5b554c22f42d26a1b1791ac8094657"
+    },
+    "synthetic_training.csv": {
+      "bytes": 10862,
+      "sha256": "6562842e4c0a954093e23222bd5514bc4bd5a4c3ea5f3e7864290537a8ce796c"
+    }
+  }
+}

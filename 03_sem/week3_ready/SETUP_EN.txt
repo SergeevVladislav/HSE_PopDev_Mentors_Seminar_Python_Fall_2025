@@ -1,0 +1,94 @@
+PYTHON AND JUPYTER: INSTALLATION AND REPRODUCTION
+
+1. GET THE FILES
+
+Download student_materials.zip from the Week 3 GitHub folder and extract it.
+Do not open notebooks from inside the ZIP. Open the extracted popdev_week3 folder.
+If using the full repository, work in 03_sem/week3_ready.
+All five CSVs must remain inside data/. Do not rename them.
+
+2. USE YOUR EXISTING ENVIRONMENT
+
+The Week 1/2 environment can be reused. In Jupyter, run this temporary cell:
+
+    import sys
+    print(sys.executable)
+    %pip install -r requirements.txt
+
+Restart the kernel after installation. The %pip magic installs in the notebook's
+active environment. Running pip in an unrelated terminal may install elsewhere.
+
+3. OPTIONAL: CREATE A NEW ENVIRONMENT
+
+Python 3.12 was used for validation. Python 3.11 or newer is recommended.
+Install Python from https://www.python.org/downloads/ if it is missing.
+On Windows, enable the installer option to add Python to PATH.
+Open a terminal in the extracted folder.
+
+Windows PowerShell:
+    py -3.12 -m venv .venv
+    .\.venv\Scripts\python.exe -m pip install --upgrade pip
+    .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+    .\.venv\Scripts\python.exe -m notebook
+
+If Python 3.12 is not installed, use your installed supported version instead.
+Explicit interpreter paths avoid PowerShell activation-policy problems.
+
+macOS / Linux:
+    python3 -m venv .venv
+    .venv/bin/python -m pip install --upgrade pip
+    .venv/bin/python -m pip install -r requirements.txt
+    .venv/bin/python -m notebook
+
+If Linux reports that venv is unavailable, install the venv component supplied
+by your operating system for your Python version, then repeat creation.
+
+4. SELECT THE RIGHT KERNEL
+
+If Jupyter runs in another environment, register the new interpreter:
+
+Windows:
+    .\.venv\Scripts\python.exe -m ipykernel install --user --name popdev --display-name "Python (PopDev)"
+macOS / Linux:
+    .venv/bin/python -m ipykernel install --user --name popdev --display-name "Python (PopDev)"
+
+Select Python (PopDev) in the notebook's kernel menu. Confirm sys.executable.
+Run 00_setup_check.ipynb. It checks package imports, input files, and plotting.
+
+5. WORK IN THE EXERCISES
+
+Open 01_cultural_domains_student.ipynb or 02_policy_evaluation_student.ipynb.
+03_matching_optional_student.ipynb is an independent optional extension.
+Write code in the empty task cells and explanations in the interpretation cells.
+Ctrl+Enter runs the current cell; Shift+Enter runs it and moves to the next.
+Keep figure creation, plotting, labelling, and plt.show() together when running.
+Each notebook has its own Python session: imports in another notebook are not
+available here. Run tasks from the top and save your work.
+
+6. TROUBLESHOOTING
+
+ModuleNotFoundError: install requirements.txt in the active kernel; restart it.
+FileNotFoundError: inspect Path.cwd(); open the notebook from the correct folder.
+KeyError: compare exact column names, capital letters, and spaces.
+NameError: run the earlier task that defines the object in this same notebook.
+IndentationError: use consistent indentation inside def / if / for blocks.
+MergeError: inspect whether the metadata key is unique; do not bypass validation.
+AssertionError: read the failed check and inspect the data or earlier selection.
+An old saved output does not create variables in a fresh Python session.
+Before submission, restart the kernel and run the completed notebook in order.
+
+7. INPUTS AND OUTPUTS
+
+Data sources and meanings: data/README.md; file hashes: data/provenance.json.
+The cultural-domain and training files are entirely synthetic teaching data.
+card_krueger_1992.csv is a documented selection from the author's public archive.
+No raw RLMS data, API keys, class roster, or credentials are needed.
+Analysis exports belong in outputs/. Preserve original inputs for reproduction.
+
+8. SETUP ASSISTANTS
+
+Inspect first; do not recreate an environment or overwrite completed notebooks
+without need. Install only the declared dependencies. Keep the directory layout.
+Run the diagnostics, identify missing files/packages, and report the outcome.
+Blank exercise cells are intentional. Code assistance does not authorise writing
+the research article, replacing human coding decisions, or inventing findings.

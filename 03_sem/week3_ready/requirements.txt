@@ -1,0 +1,7 @@
+numpy>=1.26
+pandas>=2.2
+matplotlib>=3.8
+seaborn>=0.13
+statsmodels>=0.14
+notebook>=7
+ipykernel>=6.29

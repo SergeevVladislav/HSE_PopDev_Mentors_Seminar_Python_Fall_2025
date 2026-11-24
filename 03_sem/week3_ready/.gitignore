@@ -1,0 +1,21 @@
+# Public student files only; all other files stay local.
+/*
+!/.gitignore
+!/README.md
+!/SETUP_EN.txt
+!/requirements.txt
+!/00_setup_check.ipynb
+!/01_cultural_domains_student.ipynb
+!/02_policy_evaluation_student.ipynb
+!/03_matching_optional_student.ipynb
+!/Week3_Cultural_Domains_Policy_Evaluation.pdf
+!/student_materials.zip
+!/data/
+/data/*
+!/data/README.md
+!/data/provenance.json
+!/data/synthetic_freelists.csv
+!/data/synthetic_respondents.csv
+!/data/synthetic_piles.csv
+!/data/synthetic_training.csv
+!/data/card_krueger_1992.csv

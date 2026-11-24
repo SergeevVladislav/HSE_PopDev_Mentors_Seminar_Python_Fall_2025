@@ -26,3 +26,14 @@ Dataset descriptions, original sources, and download links are in the [Week 1 RE
 - [Download the student materials](02_sem/week2_ready/student_materials.zip)
 
 The Week 2 archive includes public demographic data. RLMS-HSE microdata must be downloaded from HSE and prepared locally using the included instructions and script.
+
+## Week 3
+
+- [Materials, installation, and datasets](03_sem/week3_ready/README.md)
+- [Cultural domains and policy evaluation: presentation](03_sem/week3_ready/Week3_Cultural_Domains_Policy_Evaluation.pdf)
+- [Free lists, text cleaning, and pile sorting](03_sem/week3_ready/01_cultural_domains_student.ipynb)
+- [Policy evaluation and difference in differences](03_sem/week3_ready/02_policy_evaluation_student.ipynb)
+- [Optional: propensity-score matching](03_sem/week3_ready/03_matching_optional_student.ipynb)
+- [Download the student materials](03_sem/week3_ready/student_materials.zip?raw=1)
+
+The Week 3 archive includes a documented extract of the Card–Krueger restaurant survey and clearly labelled synthetic practice data. Original downloads, variable definitions, and provenance are in the [data documentation](03_sem/week3_ready/data/README.md).

@@ -1,0 +1,25 @@
+respondent_id,item_1,item_2,item_3,item_4,item_5
+S01,Transport,home support,affordable care,information,
+S02,bus service,information,digital help,,
+S03,social activities,transport,accessible buildings,home support,
+S04, affordable care ,home care,transport,coordination,information
+S05,digital help,information,social activities,,
+S06,transport,buses,accessible buildings,information,
+S07,home support,affordable care,coordination,,
+S08,social activities,digital help,information,transport,
+S09,home support,transport,affordable care,coordination,
+S10,affordable care,home support,information,,
+S11,information,coordination,transport,digital help,
+S12,home care,affordable care,accessible buildings,transport,
+S13,transport,social activities,home support,,
+S14,coordination,home support,information,affordable care,
+S15,accessible buildings,transport,affordable care,,
+S16,home support,coordination,social activities,information,digital help
+S17,transport,affordable care,home support,social activities,
+S18,home support,affordable care,transport,,
+S19,social activities,transport,accessible buildings,,
+S20,affordable care,information,home support,transport,
+S21,home support,home care,coordination,affordable care,
+S22,transport,accessible buildings,information,,
+S23,social activities,home support,affordable care,coordination,
+S24,affordable care,transport,social activities,information,digital help
